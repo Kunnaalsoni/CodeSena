@@ -1,0 +1,27 @@
+{% extends 'hospital/base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+{% if registered %}
+  <h1>You are Already registered</h1>
+{% else %}
+<div class="container jumbotron">
+  <h1>Please Log In</h1>
+  <form method="post" class="form-group">
+    {% csrf_token %}
+    <label for="Username">Enter Username
+      <input type="text" name="username" placeholder="Enter username">
+    </label>
+    <br>
+    <br>
+    <br>
+    <label for="Enter password">Enter password
+      <input type="password" name="password" placeholder="Enter password">
+    </label>
+    <br>
+    <br>
+    <br>  
+    <input type="submit" name="submit" value="Log in">
+  </form>
+</div>
+{% endif %}
+{% endblock %}

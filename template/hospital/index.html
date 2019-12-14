@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Hackoffpro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'hospital/assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'hospital/master.css' %}">
+  </head>
+    <body class="landing">
+
+  		<!-- Header -->
+  			<header id="header" class="alt">
+  				<h1><strong><a href="index.html">ChildChain</a></strong> by CodeSena</h1>
+  				<nav id="nav">
+  					<ul>
+  						<li><a href="index.html">Home</a></li>
+  						<li><a href="generic.html">About us</a></li>
+  						<li><a href="elements.html">Contact us</a></li>
+  					</ul>
+  				</nav>
+  			</header>
+
+  			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+  		<!-- Banner -->
+  			<section id="banner">
+  				<h2>ChildChain</h2>
+  				<p>We are a blockchain company <br /> that prevents birth records frauds.</p>
+  				<ul class="actions">
+  					<li><a href="{% url 'hospital:login' %}" class="button special big">Get Started</a></li>
+  				</ul>
+  			</section>
+
+  			<!-- One -->
+  				<section id="one" class="wrapper style1">
+  					<div class="container 75%">
+  						<div class="row 200%">
+  							<div class="6u 12u$(medium)">
+  								<header class="major">
+  									<h2>Who are we?</h2>
+  									<p>Apart from being a company ;)</p>
+  								</header>
+  							</div>
+  							<div class="6u$ 12u$(medium)">
+  								<p>ChildChain is a blockchain solution that solves the problem of fake birth record entries in India. In a country like India, there are a lot of schemes launched for the new born babies, so that the economical backward peopke can benefit from it.</p>
+  								<p>But, there are a lot of people who faking themselves and taking these benefits, exhausting the Government's resources. ChildChain is a solution that focuses on integrating blockchain to make this process more secure and reliable, ensuring that government's resources are properly utilised..</p>
+  							</div>
+  						</div>
+  					</div>
+  				</section>
+
+  			<!-- Two -->
+  				<section id="two" class="wrapper style2 special">
+  					<div class="container">
+  						<header class="major">
+  							<h2>Already a member? Login below:</h2>
+  							<p>Not? Get your hospital registered with us.</p>
+  						</header>
+  						<ul class="actions">
+  							<li><a href="#" class="button special big">Login</a></li>
+  							<li><a href="#" class="button big">Sign Up</a></li>
+  						</ul>
+  					</div>
+  				</section>
+
+
+  		<!-- Footer -->
+  			<footer id="footer">
+  				<div class="container">
+  					<ul class="icons">
+  						<li><a href="#" class="icon fa-facebook"></a></li>
+  						<li><a href="#" class="icon fa-twitter"></a></li>
+  						<li><a href="#" class="icon fa-instagram"></a></li>
+  					</ul>
+  					<ul class="copyright">
+  						<li>&copy; ChildChain</li>
+  						<li>Hackoff 2.0 project</li>
+  					</ul>
+  				</div>
+  			</footer>
+
+  		<!-- Scripts -->
+  			<script src="{% static 'hospital/assets/js/jquery.min.js' %}"></script>
+  			<script src="{% static 'hospital/assets/js/skel.min.js' %}"></script>
+  			<script src="{% static 'hospital/assets/js/util.js' %}"></script>
+  			<script src="{% static 'hospital/assets/js/main.js' %}"></script>
+
+  	</body>
+  </html>

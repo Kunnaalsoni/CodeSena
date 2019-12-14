@@ -1,0 +1,11 @@
+{% extends 'hospital/base.html' %}
+{% block title %}Enter Child Details{% endblock %}
+{% block content %}
+<div class="container jumbotron">
+  <form method="post">
+    {% csrf_token %}
+    {{ user_details.as_p }}
+    <input type="submit" value="Submit">
+  </form>
+</div>
+{% endblock %}
