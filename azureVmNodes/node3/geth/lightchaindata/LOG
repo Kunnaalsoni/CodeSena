@@ -1,0 +1,8 @@
+=============== Dec 14, 2019 (GMT) ===============
+20:32:14.255920 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:32:14.480875 db@open opening
+20:32:14.482874 version@stat F·[] S·0B[] Sc·[]
+20:32:14.492632 db@janitor F·2 G·0
+20:32:14.492632 db@open done T·11.7562ms
+20:32:14.510630 db@close closing
+20:32:14.515634 db@close done T·5.0044ms
