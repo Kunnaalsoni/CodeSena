@@ -38,7 +38,7 @@ def LoginPage(request):
 
         return render(request, 'hospital/login.html')
 
-
+hashed = ""
 def submit_details(request):
     registered = False
 
@@ -48,7 +48,8 @@ def submit_details(request):
         if user_details.is_valid():
             to_hash = str(user_details).encode()
             hashed = hashlib.sha256(to_hash).hexdigest()
-            print(hashed)
+            # print(hashed)
+            # print(str(user_details))
             #saving user_details now
             user_details.save()
 
@@ -58,3 +59,7 @@ def submit_details(request):
         user_details = babyDetailsForm()
 
     return render(request, 'hospital/submitform.html',{'registered': registered , 'user_details' : user_details})
+print(hashed)
+def LogoutPage(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('hospital:login'))

@@ -1,27 +1,68 @@
-{% extends 'hospital/base.html' %}
-{% block title %}Login{% endblock %}
-{% block content %}
-{% if registered %}
-  <h1>You are Already registered</h1>
-{% else %}
-<div class="container jumbotron">
-  <h1>Please Log In</h1>
-  <form method="post" class="form-group">
-    {% csrf_token %}
-    <label for="Username">Enter Username
-      <input type="text" name="username" placeholder="Enter username">
-    </label>
-    <br>
-    <br>
-    <br>
-    <label for="Enter password">Enter password
-      <input type="password" name="password" placeholder="Enter password">
-    </label>
-    <br>
-    <br>
-    <br>  
-    <input type="submit" name="submit" value="Log in">
-  </form>
-</div>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Login -ChildChain</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/vendor/animate/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/vendor/css-hamburgers/hamburgers.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/vendor/animsition/css/animsition.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/vendor/select2/select2.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/vendor/daterangepicker/daterangepicker.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'hospital/css/main.css' %}">
+</head>
+<body>
+	{% if registered %}
+	  <h1>You are Already registered</h1>
+	{% else %}
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+				<form class="login100-form validate-form" method="post">
+					{% csrf_token %}
+					<span class="login100-form-title p-b-33">
+						Account Login
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid username is required">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+
+						<input type="submit" name="submit" class="login100-form-btn" value="Sign in">
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="{% static 'hospital/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'hospital/vendor/animsition/js/animsition.min.js' %}"></script>
+	<script src="{% static 'hospital/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'hospital/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'hospital/vendor/select2/select2.min.js' %}"></script>
+	<script src="{% static 'hospital/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'hospital/vendor/daterangepicker/daterangepicker.js' %}"></script>
+	<script src="{% static 'hospital/vendor/countdowntime/countdowntime.js' %}"></script>
+	<script src="{% static 'hospital/js/main.js' %}"></script>
+
 {% endif %}
-{% endblock %}
+</body>
+</html>

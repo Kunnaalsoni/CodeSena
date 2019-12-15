@@ -1,11 +1,18 @@
 {% extends 'hospital/base.html' %}
+{% load bootstrap4 %}
 {% block title %}Enter Child Details{% endblock %}
 {% block content %}
 <div class="container jumbotron">
+  <div class="oneline">
+    <h1 class="d-inline">ChildChain</h1>
+    <a href="{% url 'hospital:logout' %}">
+      <button type="button" name="button" class="btn btn-outline-success float-right oneline">Logout</button>
+    </a>
+  </div>
   <form method="post">
     {% csrf_token %}
-    {{ user_details.as_p }}
-    <input type="submit" value="Submit">
+    {% bootstrap_form user_details %}
+    <input type="submit" class = "btn btn-outline-success" value="Submit">
   </form>
 </div>
 {% endblock %}

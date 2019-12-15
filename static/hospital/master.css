@@ -6,3 +6,7 @@
 .center-div {
   margin-left: auto;
 }
+
+.oneline {
+  display: inline;
+}
